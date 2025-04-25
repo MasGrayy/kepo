@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Puisi Buat Kamu </title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>💌 Puisi Spesial Buat Kamu 💌</h1>
+        <div class="gombalan-box" id="gombalanBox">
+            Klik tombol di bawah untuk mulai puisi
+        </div>
+        <button onclick="tampilGombalan()">Open</button>
+    </div>
+
+    <script>
+        const gombalanList = [
+            "Selamat pagi Davina",
+            "Pagi datang dengan cahaya yang lembut,seperti dirimu yang selalu memberi ketenangan. Hari baru telah menunggu, penuh tantangan,tapi ingat, kamu tidak pernah sendiri dalam perjalanan.",
+            "Setiap langkah yang kau ambil, adalah keberanian yang tak terlihat. Walau dunia kadang tampak berat, jangan ragu, kamu lebih kuat dari yang kau kira.",
+            "Semangatmu seperti cahaya, yang menerangi jalan yang kadang gelap. Terus berjalan, dengan penuh keyakinan, karena setiap hari adalah kesempatan baru untuk bersinar.",
+            
+        ];
+
+        let index = 0;
+
+        function tampilGombalan() {
+            const box = document.getElementById('gombalanBox');
+            box.textContent = gombalanList[index];
+            index = (index + 1) % gombalanList.length; // ulang dari awal setelah habis
+        }
+    </script>
+</body>
+</html>
